@@ -3,5 +3,5 @@ kind: ConfigMap
 metadata:
   name: {{ .Release.Name }}-configmap
 data:
-  occupation: {{ .Values.occupation }}
-  hosting: {{ .Values.hosting }}
+  occupation: {{ .Values.occupation | quote}}
+  hosting: {{ .Values.hosting | quote }}
