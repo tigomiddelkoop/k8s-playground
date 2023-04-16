@@ -4,5 +4,7 @@ metadata:
   name: {{ .Release.Name }}-configmap
 data:
   occupation: {{ .Values.occupation | quote}}
-  hosting: {{ .Values.hosting | quote }}
-  test: "test"
+  hosting: |-
+    {{- range .Values.hosting }}
+    - {{ . | title | quote }}
+    {{- end }}
