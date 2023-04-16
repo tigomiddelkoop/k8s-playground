@@ -5,3 +5,4 @@ metadata:
 data:
   occupation: {{ .Values.occupation | quote}}
   hosting: {{ .Values.hosting | quote }}
+  test: "test"
