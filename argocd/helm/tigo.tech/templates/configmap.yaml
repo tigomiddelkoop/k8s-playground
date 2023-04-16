@@ -4,3 +4,4 @@ metadata:
   name: {{ .Release.Name }}-configmap
 data:
   occupation: {{ .Values.occupation }}
+  hosting: {{ .Values.hosting }}
